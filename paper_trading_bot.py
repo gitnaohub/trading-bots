@@ -17,8 +17,12 @@ sys.path.insert(0, os.path.expanduser('~/trading'))
 from paper_trading import PaperTradingTracker
 
 # Configuration
-BOT_TOKEN = os.getenv('PAPER_BOT_TOKEN', 'REDACTED_TOKEN')
-CHAT_ID = os.getenv('PAPER_CHAT_ID', '5710626814')
+BOT_TOKEN = os.getenv('PAPER_BOT_TOKEN')
+CHAT_ID = os.getenv('PAPER_CHAT_ID')
+
+if not BOT_TOKEN or not CHAT_ID:
+    print("❌ Error: PAPER_BOT_TOKEN and PAPER_CHAT_ID environment variables must be set")
+    sys.exit(1)
 
 # Data files
 PAPER_V3_FILE = os.path.expanduser('~/trading/data/paper_trading_v3.json')
