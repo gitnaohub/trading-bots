@@ -1,0 +1,14 @@
+#!/bin/bash
+# Run MEXC Scanner V3 Telegram Bot
+# COPY THIS FILE TO run_telegram_bot_v3.sh AND ADD YOUR CREDENTIALS
+
+# Set API credentials
+export MEXC_API_KEY="your_mexc_api_key_here"
+export MEXC_API_SECRET="your_mexc_api_secret_here"
+
+# Set Telegram credentials
+export TELEGRAM_BOT_TOKEN="your_telegram_bot_token_here"
+export TELEGRAM_CHAT_ID="your_telegram_chat_id_here"
+
+cd ~/trading
+python3 telegram_bot_v3.py
