@@ -30,3 +30,5 @@ ENV/
 .DS_Store
 Thumbs.db
 run_telegram_bot_v3.sh
+start_v4_bot.sh
+start_paper_bot.sh

@@ -1,0 +1,20 @@
+#!/bin/bash
+# Start V4 Bot - COPY THIS FILE TO start_v4_bot.sh AND ADD YOUR CREDENTIALS
+
+# Kill any running bot
+pkill -f telegram_bot_v4 2>/dev/null
+
+# Set credentials
+export TELEGRAM_BOT_TOKEN="your_telegram_bot_token_here"
+export TELEGRAM_CHAT_ID="your_telegram_chat_id_here"
+
+# Check MEXC
+if [ -z "$MEXC_API_KEY" ]; then
+    echo "⚠️  Set MEXC_API_KEY first"
+    exit 1
+fi
+
+cd ~/trading
+
+echo "🤖 Starting V4 Bot..."
+python3 telegram_bot_v4.py

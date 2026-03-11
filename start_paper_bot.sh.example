@@ -1,0 +1,20 @@
+#!/bin/bash
+# Start Paper Trading Bot - COPY THIS FILE TO start_paper_bot.sh AND ADD YOUR CREDENTIALS
+
+cd ~/trading
+
+# Set credentials
+export PAPER_BOT_TOKEN="your_paper_bot_token_here"
+export PAPER_CHAT_ID="your_telegram_chat_id_here"
+
+echo "📊 Starting Paper Trading Bot"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+echo "✅ Dedicated bot for tracking V3 and V4 performance"
+echo "✅ Compare RSI 30/70 (V3) vs RSI 20/80 (V4)"
+echo ""
+echo "📱 Open Telegram bot and use buttons"
+echo "⏹️  Press Ctrl+C to stop"
+echo ""
+
+python3 paper_trading_bot.py
